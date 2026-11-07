@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator jQuery</title>
+
+  <!-- File CSS (tampilan) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="kalkulator">
+
+    <!-- Syarat 1: tampilkan NIM dan Nama -->
+    <div class="identitas">
+      <p id="nim">NIM: 255150700111014</p>
+      <p id="nama">Nama: Mufidah Samlawi</p>
+    </div>
+
+    <!-- Layar hasil, contoh: 12 + 5 = 17 -->
+    <div id="layar">0</div>
+
+    <div class="area-tombol">
+
+      <!-- Tombol angka dan koma (kiri) -->
+      <div class="angka">
+        <button class="btn-angka">1</button>
+        <button class="btn-angka">2</button>
+        <button class="btn-angka">3</button>
+        <button class="btn-angka">4</button>
+        <button class="btn-angka">5</button>
+        <button class="btn-angka">6</button>
+        <button class="btn-angka">7</button>
+        <button class="btn-angka">8</button>
+        <button class="btn-angka">9</button>
+        <button id="hapus">C</button>
+        <button class="btn-angka">0</button>
+        <button id="koma">,</button>
+      </div>
+
+      <!-- Syarat 2: operasi + - * / (kanan) -->
+      <div class="operator">
+        <button class="btn-operator" data-op="+">+</button>
+        <button class="btn-operator" data-op="-">-</button>
+        <button class="btn-operator" data-op="*">*</button>
+        <button class="btn-operator" data-op="/">/</button>
+      </div>
+
+    </div>
+
+    <!-- Tombol sama dengan (lebar, di bawah) -->
+    <button id="sama">=</button>
+  </div>
+
+  <!-- 1) Muat jQuery dulu (dari CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- 2) Baru muat script buatan kita -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* =========================================== */
+:root {
+  --bg-halaman: #ffe4ef;   /* latar halaman (pink muda) */
+  --pink-muda: #ffc2da;    /* tombol angka, kotak NIM */
+  --pink-tua: #ff6fa5;     /* border, tombol C */
+  --sage-muda: #e4ecda;    /* layar */
+  --sage: #9caf88;         /* tombol operator */
+  --sage-hover: #86996f;   /* operator saat disentuh mouse */
+  --sage-tua: #5f7a4e;     /* tombol =, border layar */
+  --teks: #3a2a33;
+  --teks-sage: #243019;
+  --putih: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-halaman);
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  color: var(--teks);
+}
+
+/* ===== Kotak kalkulator ===== */
+.kalkulator {
+  width: 340px;
+  background: var(--putih);
+  padding: 20px;
+  border-radius: 18px;
+  border: 3px solid var(--pink-tua);
+  box-shadow: 0 8px 20px rgba(255, 111, 165, 0.35);
+}
+
+/* ===== NIM dan Nama ===== */
+.identitas {
+  text-align: center;
+  margin-bottom: 14px;
+  padding: 8px;
+  background: var(--pink-muda);
+  border-radius: 10px;
+}
+
+.identitas p {
+  margin: 2px 0;
+  font-weight: bold;
+}
+
+/* ===== Layar hasil ===== */
+#layar {
+  background: var(--sage-muda);
+  border: 3px solid var(--sage-tua);
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: right;
+  min-height: 60px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  color: var(--sage-tua);
+}
+
+/* ===== Susunan tombol ===== */
+.area-tombol {
+  display: flex;
+  gap: 12px;
+}
+
+.angka {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.operator {
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* ===== Gaya dasar semua tombol ===== */
+button {
+  padding: 16px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid var(--pink-tua);
+  border-radius: 10px;
+  background: var(--pink-muda);
+  color: var(--teks);
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+}
+
+button:hover {
+  background: var(--pink-tua);
+  color: var(--putih);
+}
+
+button:active {
+  transform: scale(0.94);   /* efek tertekan saat diklik */
+}
+
+/* ===== Tombol operator (sage) ===== */
+.btn-operator {
+  background: var(--sage);
+  border-color: var(--sage-tua);
+  color: var(--teks-sage);
+}
+
+.btn-operator:hover {
+  background: var(--sage-hover);
+  color: var(--putih);
+}
+
+/* ===== Tombol C ===== */
+#hapus {
+  background: var(--pink-tua);
+  color: var(--putih);
+}
+
+#hapus:hover {
+  background: #e0457f;
+}
+
+/* ===== Tombol = ===== */
+#sama {
+  width: 100%;
+  margin-top: 12px;
+  background: var(--sage-tua);
+  border-color: var(--sage-tua);
+  color: var(--putih);
+  font-size: 24px;
+}
+
+#sama:hover {
+  background: #4a613d;
+}
